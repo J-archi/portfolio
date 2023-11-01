@@ -2,5 +2,5 @@
 
 ## Dimension des photos
 
-* Banner : 1440px x 990px
-* Carrée : 500px x 500px
+* Banner : 1440px X 990px
+* Carrée : 500px X 500px
