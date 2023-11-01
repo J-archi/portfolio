@@ -1,0 +1,19 @@
+items:
+  - title: "S1"
+    description: "description"
+    img: "s1-3-maquette-01.jpg"
+    page: "s1"
+    content:
+      - name: "image 1"
+        img: "s1-3-maquette-01.jpg"
+      - name: "image 2"
+        img: "s1-3-maquette-02.jpg"
+      - name: "image 3"
+        img: "s1-3-maquette-03.jpg"
+  - title: "S2"
+    description: "description"
+    img: "s2-2-fusain-01.jpg"
+    page: "s2"
+    content:
+      - name: "image 1"
+        img: "s2-2-fusain-01.jpg"
