@@ -2,84 +2,67 @@
 title: "J-Archi"
 description: "Description J-Archi"
 ---
-<div id="wrapper" class="divided">
-  <!-- Banner -->
-  <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-    <div class="content">
-      <h1>J-Archi</h1>
-      <p class="major">A (modular, highly tweakable) responsive one-page template designed by <a href="https://html5up.net">HTML5 UP</a> and released for free under the <a href="https://html5up.net/license">Creative Commons</a>.</p>
-      <p>This is a <strong>Banner</strong> element, and it's generally used as an introduction or opening statement. You can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-banner">details</a>).</p>
-      <ul class="actions stacked">
-        <li><a href="#first" class="button large wide smooth-scroll-middle">Get Started</a></li>
-      </ul>
-    </div>
-    <div class="image">
-      <img src="/assets/img/portfolio/s2-2-fusain-01.jpg" alt="J-Archi" />
-    </div>
-  <!-- Banner End -->
-  </section>
-  <!-- Gallery Header -->
-  <section class="wrapper style1 align-center">
-		<div class="inner">
-			<h2><%= config.portfolio_title %></h2>
-			<p>This is a <strong>Gallery</strong> element.</p>
-		</div>
-		<!-- Gallery Elements -->
-		<div class="gallery style2 medium lightbox onscroll-fade-in">
-			<% data.portfolio.items.each do |item| %>
-				<article>
-					<a href="#" title="<%= item.title %>">
-						<img src="/assets/img/thumbs/<%= item.img %>" alt="<%= item.title %>" title="<%= item.title %>" />
-					</a>
-				</article>
-			<% end %>
-		<!-- Gallery Elements End -->
-		</div>
-	<!-- Gallery End -->
-	</section>
-	<!-- Form -->
-	<section class="wrapper style1 align-center">
-		<div class="inner">
-			<header>
-				<h3>Contact</h3>
-			</header>
-			<div class="content">
-				<form method="post" action="#">
-					<div class="fields">
-						<div class="field half">
-							<label for="name"><%= config.form_name %></label>
-							<input type="text" name="name" id="name" value="" />
-						</div>
-						<div class="field half">
-							<label for="email"><%= config.form_email %></label>
-							<input type="email" name="email" id="email" value="" />
-						</div>
-						<div class="field">
-							<label for="message"><%= config.form_message %></label>
-							<textarea name="message" id="message" rows="6"></textarea>
-						</div>
+<!-- Banner -->
+<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+	<div class="content">
+		<h1>J-Archi</h1>
+		<p class="major">A (modular, highly tweakable) responsive one-page template designed by <a href="https://html5up.net">HTML5 UP</a> and released for free under the <a href="https://html5up.net/license">Creative Commons</a>.</p>
+		<p>This is a <strong>Banner</strong> element, and it's generally used as an introduction or opening statement. You can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-banner">details</a>).</p>
+		<ul class="actions stacked">
+			<li><a href="#first" class="button large wide smooth-scroll-middle">Get Started</a></li>
+		</ul>
+	</div>
+	<div class="image">
+		<img src="/assets/img/portfolio/s2-2-fusain-01.jpg" alt="J-Archi" />
+	</div>
+<!-- Banner End -->
+</section>
+<!-- Gallery Header -->
+<section class="wrapper style1 align-center" id="first">
+	<div class="inner">
+		<h2><%= config.portfolio_title %></h2>
+		<p>This is a <strong>Gallery</strong> element.</p>
+	</div>
+	<!-- Gallery Elements -->
+	<div class="gallery style2 medium lightbox onscroll-fade-in">
+		<% data.portfolio.items.each do |item| %>
+			<article>
+				<a href="/portfolio/<%= item.page %>.html" title="<%= item.title %>">
+					<img src="/assets/img/thumbs/<%= item.img %>" alt="<%= item.title %>" title="<%= item.title %>" />
+				</a>
+			</article>
+		<% end %>
+	<!-- Gallery Elements End -->
+	</div>
+<!-- Gallery End -->
+</section>
+<!-- Form -->
+<section class="wrapper style1 align-center">
+	<div class="inner">
+		<header>
+			<h3><%= config.form_title %>></h3>
+		</header>
+		<div class="content">
+			<form method="post" action="#">
+				<div class="fields">
+					<div class="field half">
+						<label for="name"><%= config.form_name %></label>
+						<input type="text" name="name" id="name" value="" />
 					</div>
-					<ul class="actions">
-						<li><input type="submit" name="submit" id="submit" value="<%= config.form_submit %>" /></li>
-					</ul>
-				</form>
-			</div>
-		 </div>
-	<!-- Form End -->
-	</section>
-	<!-- Footer -->
-	<footer class="wrapper style1 align-center">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-				<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-			</ul>
-			<p>&copy; <%= config.site_title %>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					<div class="field half">
+						<label for="email"><%= config.form_email %></label>
+						<input type="email" name="email" id="email" value="" />
+					</div>
+					<div class="field">
+						<label for="message"><%= config.form_message %></label>
+						<textarea name="message" id="message" rows="6"></textarea>
+					</div>
+				</div>
+				<ul class="actions">
+					<li><input type="submit" name="submit" id="submit" value="<%= config.form_submit %>" /></li>
+				</ul>
+			</form>
 		</div>
-	<!-- Footer End -->
-	</footer>
-<!-- Wrapper End -->
-</div>
+	 </div>
+<!-- Form End -->
+</section>

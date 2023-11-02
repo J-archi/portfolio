@@ -1,0 +1,20 @@
+# robotstxt.org/
+#
+User-agent:	*
+Allow: /
+#
+Sitemap: https://j-archi.net/sitemap.xml
+#
+Disallow: /assets/
+#
+User-agent: TurnitinBot
+Disallow: /
+#
+User-agent: ConveraCrawler
+Disallow: /
+#
+User-agent: QuepasaCreep
+Disallow: /
+#
+User-agent: Jetbot
+Disallow: /

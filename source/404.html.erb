@@ -1,0 +1,14 @@
+---
+title: "Erreur 404"
+description: "Il semblerait qu&apos;il y ait une erreur de navigation !"
+img: "/assets/img/portfolio/s2-2-fusain-01.jpg"
+---
+<section class="wrapper style1 align-center">
+  <div class="inner">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+    <span class="image fit">
+      <img src="<%= current_page.data.img %>" alt="<%= current_page.data.title %>" title="<%= current_page.data.title %>" />
+    </span>
+  </div>
+</section>

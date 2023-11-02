@@ -1,0 +1,24 @@
+<!-- Form -->
+<section class="wrapper style1 align-center">
+  <div class="inner">
+    <header>
+      <h3><%= current_page.data.title %></h3>
+      <p><%= current_page.data.description %></p>
+    </header>
+  </div>
+  <div class="inner">
+    <div class="index align-left">
+      <section>
+        <header><%= config.portfolio_title %></header>
+        <div class="content">
+          <% current_page.data.content.each do |item| %>
+            <h4><%= item.name %></h4>
+            <span class="image fit">
+              <img src="/assets/img/portfolio/<%= item.img %>" alt="<%= item.name %>" title="<%= item.name %>" />
+            </span>
+          <% end %>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

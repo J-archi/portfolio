@@ -12,6 +12,7 @@ set :form_email, 'Email'
 set :form_message, 'Message'
 set :form_name, 'Nom'
 set :form_submit, 'Envoyer'
+set :form_title, 'Contact'
 set :portfolio_title, 'Portfolio'
 set :site_author, '@j-archi'
 set :site_title, 'J-Archi'
@@ -44,6 +45,10 @@ set :js_dir, 'assets/js'
 #     which_fake_page: 'Rendering a fake page with a local variable'
 #   },
 # )
+
+@app.data.portfolio.items.each do |item|
+  proxy "/portfolio/#{item.page}.html", "/portfolio/template.html", :data => item, :ignore => true
+end
 
 # Helpers
 # Methods defined in the helpers block are available in templates
