@@ -4,3 +4,4 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'builder', '~> 3.2'
 gem 'middleman', '~> 4.5'
 gem 'middleman-autoprefixer', '~> 3.0'
+gem 'nokogiri', '~> 1.14'

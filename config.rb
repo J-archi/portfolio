@@ -62,8 +62,20 @@ end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
+configure :build do
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+  # For example, change the Compass output style for deployment
+  activate :minify_css
+
+  # Minify Javascript on build
+  activate :minify_javascript
+
+  # Gzip
+  activate :gzip
+
+  # Enable cache buster
+  # activate :asset_hash
+
+  # Use relative URLs
+  # activate :relative_assets
+end
