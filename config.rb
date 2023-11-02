@@ -7,7 +7,14 @@ end
 
 # Variables
 # Set site URL & Title
+set :button_detail, 'Consulter'
+set :form_email, 'Email'
+set :form_message, 'Message'
+set :form_name, 'Nom'
+set :form_submit, 'Envoyer'
+set :portfolio_title, 'Portfolio'
 set :site_author, '@j-archi'
+set :site_title, 'J-Archi'
 set :url_root, 'https://j-archi.net'
 
 # Layouts
@@ -23,35 +30,6 @@ page '/*.txt', layout: false
 set :css_dir, 'assets/css'
 set :images_dir, 'assets/img'
 set :js_dir, 'assets/js'
-
-# Location
-Time.zone = 'Paris'
-I18n.config.enforce_available_locales = false
-
-# Blog
-activate :blog do |blog|
-  # This will add a prefix to all links, template references and source paths
-  blog.prefix = 'articles'
-  # Permalink
-  blog.permalink = '{category}/{title}.html'
-  # Layout
-  blog.layout = 'article'
-  # Matcher for blog source files
-  blog.default_extension = '.markdown'
-  # Enable Categories
-  blog.custom_collections = {
-    category: {
-      link: '/categories/{category}.html',
-      template: '/articles/category.html'
-    }
-  }
-  # Tag template
-  blog.tag_template = '/articles/tag.html'
-  # Enable pagination
-  blog.paginate = true
-  blog.per_page = 6
-  blog.page_link = 'page/{num}'
-end
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'

@@ -2,10 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <title><%= current_page.data.title || config.site_title %></title>
+    <meta name="description" content="<%= current_page.data.description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript>
+      <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
   </head>
-  <body>
-  	<h1><%= current_page.data.title || "Middleman" %></h1>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <%= yield %>
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.scrollex.min.js"></script>
+    <script src="/assets/js/jquery.scrolly.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
